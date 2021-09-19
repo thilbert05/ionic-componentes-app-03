@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" color="primary" text="Regresar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>List reorder</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-button
+  class="ion-padding"
+  (click)="toggleDisable()"
+  expand="block"
+  [color]="disabled ? 'facebook' : 'google'">
+    {{ disabled ? 'Enable' : 'Disable' }} reorder
+  </ion-button>
+
+  <ion-list class="ion-margin-top">
+    <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]="disabled">
+      <ion-item *ngFor="let personaje of personajes">
+        <ion-reorder slot="start">
+          <ion-icon name="repeat-outline"></ion-icon>
+        </ion-reorder>
+        <ion-label>{{ personaje }}</ion-label>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+
+</ion-content>

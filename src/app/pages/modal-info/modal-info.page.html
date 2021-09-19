@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ nombre ? nombre : 'Modal Page'}} - {{ pais }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="salirSinArgs()" expand="block">
+    Salir sin argumentos
+  </ion-button>
+
+  <ion-button (click)="salirConArgumentos()" expand="block">
+    Salir con argumentos
+  </ion-button>
+
+</ion-content>

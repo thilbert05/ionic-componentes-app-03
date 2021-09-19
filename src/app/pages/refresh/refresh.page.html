@@ -1,0 +1,14 @@
+<app-header titulo="refresher"></app-header>
+
+<ion-content class="ion-margin-top">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item *ngFor="let item of items; index as i"
+    class="animate__animated animate__slideInUp animate__faster">
+      <ion-label>Item: {{ i + 1 }}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

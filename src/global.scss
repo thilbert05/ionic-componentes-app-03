@@ -28,3 +28,7 @@
 .delete-option, .delete-option .action-sheet-icon {
   color:red !important;
 }
+
+ion-item {
+  --background: transparent;
+}
